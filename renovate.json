@@ -1,4 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>benmelz/renovate-config"]
+  "extends": ["local>benmelz/renovate-config"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^\\.github/workflows/renovate\\.yml$"],
+      "matchStrings": ["renovate-version:\\s*(?<currentValue>[^\\s\"']+)"],
+      "depNameTemplate": "renovate",
+      "datasourceTemplate": "npm"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["renovate"],
+      "groupName": "renovate"
+    }
+  ]
 }
