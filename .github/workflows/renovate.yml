@@ -13,11 +13,14 @@ jobs:
       - uses: actions/create-github-app-token@v3
         id: app-token
         with:
-          app-id: ${{ secrets.RENOVATE_APP_ID }}
+          client-id: ${{ secrets.RENOVATE_APP_ID }}
           private-key: ${{ secrets.RENOVATE_PRIVATE_KEY }}
+          owner: benmelz
       - uses: actions/checkout@v7
       - uses: renovatebot/github-action@v46.2.4
         with:
           renovate-version: 44.48.0
           configurationFile: config.js
           token: ${{ steps.app-token.outputs.token }}
+        env:
+          LOG_LEVEL: debug
