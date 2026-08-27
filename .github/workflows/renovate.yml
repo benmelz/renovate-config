@@ -19,6 +19,7 @@ jobs:
       - uses: actions/checkout@v7
       - uses: renovatebot/github-action@v46.2.4
         with:
+          # renovate: datasource=npm depName=renovate
           renovate-version: 44.48.0
           configurationFile: config.js
           token: ${{ steps.app-token.outputs.token }}
