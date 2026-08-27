@@ -1,5 +1,10 @@
 export default {
   platform: "github",
-  repositories: ["benmelz/renovate-config"],
+  repositories: [
+    "benmelz/haml-lint-intellij-plugin",
+    "benmelz/ioprio",
+    "benmelz/limitable",
+    "benmelz/renovate-config",
+  ],
   repositoryCache: "enabled",
 };
