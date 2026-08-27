@@ -1,0 +1,15 @@
+{
+  "name": "renovate-config",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "oxfmt": "*",
+    "oxlint": "*",
+    "renovate": "*"
+  },
+  "allowScripts": {
+    "re2@1.26.1": true,
+    "core-js-pure@3.50.0": true,
+    "dtrace-provider@0.8.8": true
+  }
+}
