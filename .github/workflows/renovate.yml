@@ -17,7 +17,7 @@ jobs:
           private-key: ${{ secrets.RENOVATE_PRIVATE_KEY }}
           owner: benmelz
       - uses: actions/checkout@v7
-      - uses: renovatebot/github-action@v46.2.4
+      - uses: renovatebot/github-action@v46.2.5
         with:
           renovate-version: 44.48.2
           configurationFile: config.js
